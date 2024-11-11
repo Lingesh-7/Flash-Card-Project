@@ -18,7 +18,7 @@ def flip():
 try:
     data=p.read_csv("words_to_learn.csv")
 except FileNotFoundError:
-    orgdata=p.read_csv(r"C:\Users\linge\Desktop\python 100 days\projects\pr-31\data\french_words.csv")
+    orgdata=p.read_csv(r"french_words.csv")
     w=orgdata.to_dict(orient="records")
 else:
     w=data.to_dict(orient="records")
@@ -53,10 +53,10 @@ win.config(padx=50,pady=50,bg=BACKGROUND_COLOR)
 
 fliptim=win.after(3000,func=flip)
 
-fimg=PhotoImage(file=r"C:\Users\linge\Desktop\python 100 days\projects\pr-31\images\card_front.png")
-rimg=PhotoImage(file=r"C:\Users\linge\Desktop\python 100 days\projects\pr-31\images\right.png")
-wimg=PhotoImage(file=r"C:\Users\linge\Desktop\python 100 days\projects\pr-31\images\wrong.png")
-backimg=PhotoImage(file=r"C:\Users\linge\Desktop\python 100 days\projects\pr-31\images\card_back.png")
+fimg=PhotoImage(file=r"card_front.png")
+rimg=PhotoImage(file=r"right.png")
+wimg=PhotoImage(file=r"wrong.png")
+backimg=PhotoImage(file=r"card_back.png")
 
 canva=Canvas(width=800,height=526,bg=BACKGROUND_COLOR,highlightthickness=0)
 cb=canva.create_image(400,263,image=fimg)
